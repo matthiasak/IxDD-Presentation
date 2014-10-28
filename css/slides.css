@@ -494,3 +494,7 @@ article::after {
     background-image: url(https://raw.githubusercontent.com/matthiasak/radial-menu/master/boxout2-2.png);
     background-size: contain;
 }
+.menu::before {
+    background-image: url(../img/menu.gif);
+    background-size: contain;
+}
