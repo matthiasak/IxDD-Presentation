@@ -1,0 +1,36 @@
+{
+  "name": "normalize-opentype.css",
+  "version": "0.2.0",
+  "homepage": "http://kennethormandy.com/journal/normalize-opentype-css",
+  "authors": [
+    "Kenneth Ormandy <kenneth@chloi.io>"
+  ],
+  "description": "Adds OpenType features—ligatures, kerning, and more—to Normalize.css.",
+  "main": "normalize-opentype.css",
+  "keywords": [
+    "normalize",
+    "type",
+    "typography",
+    "opentype",
+    "fonts",
+    "css"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test"
+  ],
+  "_release": "0.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.0",
+    "commit": "932aedf514603b41f856bc50ce8f68997fbb2261"
+  },
+  "_source": "git://github.com/kennethormandy/normalize-opentype.css.git",
+  "_target": "~0.2.0",
+  "_originalSource": "normalize-opentype.css",
+  "_direct": true
+}

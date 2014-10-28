@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IxDD - FOWA Boston 2014</title>
+    <link rel="stylesheet" href="./bower_components/normalize.css/normalize.css">
+    <link rel="stylesheet" href="./bower_components/normalize-opentype.css/normalize-opentype.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./bower_components/typeplate-starter-kit/css/typeplate.css"> -->
+    <link rel="stylesheet" href="./dist/font.css">
+    <link rel="stylesheet" href="./dist/slides.css">
+</head>
+
+<body>
+    <article>
+
+        <section>
+            <div class="content">
+                <div class="byline">
+                    <div class="classy">This talk is called:</div>
+                </div>
+                <h1>Designing <strong>&amp;</strong> Developing</h1>
+                <h2>Cross-Platform Interactons</h1>
+                <div class="byline">
+                    <div class="classy">with this guy:</div>
+                </div>
+                <div class="me"></div>
+                <div class="byline">
+                    <span><a target="_blank" href="http://mkeas.org/">http://mkeas.org</a>&nbsp;&nbsp;~&nbsp;&nbsp;<a target="_blank" href="https://twitter.com/matthiasak">@matthiasak</a></span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="content">
+                <div class="byline">
+                    <div class="classy ">A lil' about me:</div>
+                </div>
+                <h4>I have two security certs from <i>"The Man"</i></h4>
+                <div class="byline">
+                    <div class="classy">
+                        INFOSEC - Information Directorate - NSA
+                    </div>
+                </div>
+                <h4>I went to Univ. of Texas to study cryptography and such...</h4>
+            </div>
+        </section>
+
+        <section>
+            <div class="content">
+                <h3>Paradoxically,</h3>
+                <hr>
+                <div class="byline no-wings">
+                    <div class="classy ">I now write entire websites, servers, mobile apps, and interactive documentaries in JavaScript.</div>
+                </div>
+                <hr>
+                <h3>derp.</h3>
+            </div>
+        </section>
+
+        <section>
+            <div class="content">
+                <div class="byline">
+                    <div class="classy ">A lil' more about me:</div>
+                </div>
+                <ol class="">
+                    <li>Author &amp; writer - <a target="_blank" href="http://mkeas.org">http://mkeas.org</a></li>
+                    <li>Incredibly passionate about JS, Philosophy, Health, Math, and Design.</li>
+                    <li>Instruct at The Iron Yard in Houston, where I nurture a creative and supportive hacker community.</li>
+                    <li>I stoically enjoy divulging my thoughts on the intricacies of beer or coffee...</li>
+                </ol>
+            </div>
+        </section>
+
+        <section data-bespoke-state="tiy"></section>
+
+        <section>
+            <div class="content">
+                <div class="byline">
+                    <div class="classy ">Topics for today</div>
+                </div>
+                <ol class="">
+                    <li>DOM / browser events and their handlers</li>
+                    <li>Forward-looking: multi-touch, gestures, accelerometer, and more!</li>
+                    <li>Non-standard UI and UX concepts</li>
+                    <li>Cat herding - yanking it all together</li>
+                    <li>Pushing the boundaries with experimentation</li>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <div class="content">
+                <div class="byline">
+                    <div class="classy ">Disclaimer</div>
+                </div>
+                <h2>I am not a designer.</h2>
+                <div class="byline">
+                    <div class="classy">Just the village idiot<br>who started to think about this.</div>
+                </div>
+            </div>
+        </section>
+
+        <section data-bespoke-state="">
+            <div class="content">
+                <h1>IxD</h1>
+                <div class="byline">
+                    <div class="classy ">vs.</div>
+                </div>
+                <h1>IxDD</h1>
+            </div>
+        </section>
+
+        <!-- TODO: get "hello, is it me you're looking for?" gif -->
+        <section data-bespoke-state="hello">
+            <div class="content">
+                <h1>That elusive unicorn...</h1>
+            </div>
+        </section>
+
+        <section data-bespoke-state="minion">
+            <div class="content">
+                <h1>What it feels like to find one..</h1>
+            </div>
+        </section>
+
+        <section data-bespoke-state="pug">
+            <div class="content">
+                <h1>Once the honeymoon period is over..</h1>
+            </div>
+        </section>
+
+        <section data-bespoke-state="">
+            <div class="content">
+                <div class="byline">
+                    <div class=" classy">Custom UI's require intimate knowledge of:</div>
+                </div>
+                <ol class="">
+                    <li>HTML/CSS quirks,</li>
+                    <li>Layout and positioning,</li>
+                    <li>Handling JS events,</li>
+                    <li>The order in which events fire,</li>
+                    <li>All the different kinds of events there are...</li>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <div class="content">
+                <div class="byline">
+                    <div class="classy "><strong>Seth Godin</strong> on Visual Clichés</div>
+                </div>
+                <blockquote>Part of the art of making change happen is seeing which cultural tropes are past their prime and having the guts to invent new ones.</blockquote>
+            </div>
+        </section>
+
+        <section data-bespoke-state="">
+            <div class="content">
+                <div class="byline">
+                    <div class="classy "><strong>Nicholas Zakas</strong> on Defensive Design</div>
+                </div>
+                <blockquote>The key is to acknowledge from the start that you have no idea how this will grow. When you accept that you don't know everything, you begin to <strong>design the system defensively</strong>... You should spend most of your time thinking about interfaces rather than implementations.</blockquote>
+            </div>
+        </section>
+
+        <section data-bespoke-state="knee code">
+            <div class="content">
+                <div class="byline">
+                    <div class="classy">In otherwords... don't lose sight of what's right in front of you.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTIONS OF CORE CONTENT (1-5) -->
+        <section data-bespoke-state="code">
+            <div class="content">
+                <div class="byline">
+                    <div class="classy large">DOM / browser events and their handlers</div>
+                </div>
+            </div>
+        </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy ">Handling input by combining...</div>
+                    </div>
+                    <ul>
+                        <li>debounce</li>
+                        <li>requestAnimationFrame()</li>
+                        <li>late binding / ASAP unbinding</li>
+                        <li>state-driven visual updates</li>
+                        <li>scoped contexts (keymage)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy ">debounce()</div>
+                    </div>
+                    <pre>function debounce(func, wait) {
+    var timeout, result;
+    return function() {
+        var context = this, args = arguments;
+        <span>// run func when the timeout triggers</span>
+        var later = function() {
+            timeout = null;
+            func.apply(context, args);
+        };
+        <span>// reset timeout with latest arguments</span>
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+</pre>
+                </div>
+            </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy ">debounce()</div>
+                    </div>
+                    <pre><span>// only call scrollHandler() at max rate
+// of once every 16ms (~60fps)</span>
+window.addEventListener('scroll', debounce(scrollHandler, 16));
+</pre>
+                </div>
+            </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy ">debounce()</div>
+                    </div>
+                    <pre>function scrollHandler(){
+    <span>// handle a bit of state updates</span>
+    <span>// then handle visual updates with requestAnimationFrame()</span>
+}
+<span>// only call scrollHandler() at max rate
+// of once every 16ms (~60fps)</span>
+window.addEventListener('scroll', debounce(scrollHandler, 16));
+</pre>
+                </div>
+            </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy ">debounce() &amp; rAF()</div>
+                    </div>
+                    <pre>
+function stateUpdater(){
+    <span>// fine-tuned state updates</span>
+    var debouncedScroll = debounce(scrollHandler, 16);
+    return function(e){
+        <span>// then call debouncedScroll</span>
+        debouncedScroll(e);
+    }
+}
+function scrollHandler(){
+    <span>// handle visual updates with requestAnimationFrame()</span>
+}
+<span>// only call scrollHandler() at max rate
+// of once every 16ms (~60fps)</span>
+window.addEventListener('scroll', stateUpdater());
+</pre>
+                </div>
+            </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy ">debounce() &amp; rAF() &amp; bind/unbind ASAP</div>
+                    </div>
+                    <pre>
+function stateUpdater(){ <span>// fine-tuned state updates</span>
+    var debouncedScroll = debounce(scrollHandler, 16);
+    return function(e){ <span>// then call debouncedScroll</span>
+        debouncedScroll(e);
+    }
+}
+function scrollHandler(){ <span>// handle visual updates with requestAnimationFrame()</span> }
+function startBindings(){
+    var updater = stateUpdater(),
+        win = $(document.body);
+    win.on('touchmove mousemove PointerMove', updater);
+    win.on('touchend mouseup PointerUp', function(){
+        win.off('touchmove mousemove PointerMove', updater);
+    });
+}
+<span>// bind late, unbind ASAP</span>
+$(document.body).on('touchstart mousedown PointerDown', startBindings);
+</pre>
+                </div>
+            </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline"><div class="classy">Pointer Events (JS)</div></div>
+                    <blockquote>Pointer events are modeled after traditional mouse events, except they use the abstract concept of a pointer to apply across all user input modalities (mouse, touch, and pen).</blockquote>
+                    <ul>
+                        <li><a href="http://blogs.msdn.com/b/eternalcoding/archive/2013/01/16/hand-js-a-polyfill-for-supporting-pointer-events-on-every-browser.aspx" target="_blank">Polyfill</a></li>
+                        <li><a href="http://msdn.microsoft.com/en-us/library/ie/dn433244(v=vs.85).aspx" target="_blank">MSDN</a></li>
+                        <li><a href="https://github.com/Polymer/polymer-gestures" target="_blank">Like Polymer? There's a polyfill for that.</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline"><div class="classy">Pointer Events (CSS)</div></div>
+                    <blockquote>The pointer-events property allows for control over how HTML elements respond to mouse/touch events – including CSS hover/active states, click/tap events in Javascript, and whether or not the cursor is visible.</blockquote>
+                    <ul>
+                        <li><a href="http://css-tricks.com/almanac/properties/p/pointer-events/" target="_blank">CSS Tricks</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline"><div class="classy">Pointer Events (CSS)</div></div>
+                    <pre>
+.avoid-clicks {
+    pointer-events: none;
+}
+</pre>
+                    <div class="byline"><div class="classy">... essentially can be used on UI "hotspots"</div></div>
+                </div>
+            </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline"><div class="classy">CSS touch-action</div></div>
+                    <blockquote>This property tells the browser how to handle touches on an element. It improves the detection and experience of the gestures a lot, because it can prevent scrolling of the page without any JavaScript has to be executed, which can be too late in some cases.</blockquote>
+                    <ul>
+                        <li><a href="http://caniuse.com/#search=touch-action" target="_blank">CanIUse</a></li>
+                        <li><a href="http://hammerjs.github.io/touch-action/" target="_blank">Hammer.js</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline"><div class="classy">CSS touch-action</div></div>
+                    <pre>
+.avoid-scroll-y {
+    touch-action: pan-x;
+}
+.avoid-scroll-x {
+    touch-action: pan-y;
+}
+.avoid-all-scroll {
+    touch-action: manipulation;
+}
+</pre>
+                    <div class="byline"><div class="classy">... again can be used on UI "hotspots"</div></div>
+                </div>
+            </section>
+
+            <!-- keymage and scoped contexts -->
+
+            <section>
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Keyboard &amp; scoped event contexts</div>
+                    </div>
+                    <pre>
+<span>// This will fire after "keymage.setScope('chat')"</span>
+keymage('chat', 'ctrl-j w', function() { alert("Chat scope"); });
+
+<span>// This will fire after "keymage.setScope('chat.input')"</span>
+keymage('chat.input', 'ctrl-j e', function() { alert("Chat.input scope"); });
+
+keymage.pushScope('chat') <span>// scope is 'chat'</span>
+keymage.pushScope('input') <span>// scope is 'chat.input'</span>
+keymage.popScope() <span>// scope is 'chat'</span>
+</pre>
+                    <div class="byline">
+                        <div class="classy"><a href="https://github.com/piranha/keymage" target="_blank">keymage documentation</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Small wins...</div>
+                    </div>
+                    <ul>
+                        <li>Limit what you animate, when you animate, and how much you animate</li>
+                        <li><span>JANK:</span> touchstart / mousedown events delay the compositor thread which draws to the screen</li>
+                        <li><span>Partial-JANK:</span> scroll events only sometimes delay the compositor thread</li>
+                        <li>CSS-driven gesture optimization</li>
+                        <li>Keyboard control</li>
+                        <li>Scoped contexts</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section data-bespoke-state="bubbles">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy ">All the bubbles...</div>
+                    </div>
+                    <h2>You will have to do a lot of event management and handle lots of edge-cases</h2>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy ">Handling Input - Takeaways</div>
+                    </div>
+                    <ul>
+                        <li><span>HARD</span> - custom event code</li>
+                        <li><span>HARDER</span> - managing events contextually and working with bubbling/capturing</li>
+                        <li><span>HARDEST</span> - making interactions intuitive, and maybe even habitual <span>(designy-stuff)</span></li>
+                    </ul>
+                </div>
+            </section>
+
+        <section data-bespoke-state="code">
+            <div class="content">
+                <div class="byline">
+                    <div class="classy large">Forward-looking: multi-touch gestures, accelerometers &amp; gyroscopes</div>
+                </div>
+            </div>
+        </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy large">Forward-looking: multi-touch gestures, accelerometers &amp; gyroscopes</div>
+                    </div>
+                    <ul>
+                        <li>Multi-touch</li>
+                        <li>Gyroscope &amp; accelerometer</li>
+                        <li>Visual sensors <span>(LEAP Motion)</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Multi-touch</div>
+                    </div>
+                    <ul>
+                        <li>Really it is a <span>lot easier</span> than you would think :-)</li>
+                        <li><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/HandlingEvents/HandlingEvents.html" target="_blank">Safari Docs</a></li>
+                        <li><a href="https://developer.cdn.mozilla.net/media/uploads/demos/s/p/spite/d6783c9cdd025633dbc952d73ac8f299/multitouch-boids_1362105213_demo_package/index.html" target="_blank">Boids</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section data-bespoke-state="multitouch"></section>
+
+            <section data-bespoke-state="rotate">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Multi-touch</div>
+                    </div>
+                    <ul>
+                        <li>Typically multi-touch event handlers are used to track one or two touches.</li>
+                        <li>Multi-touch event handlers can be used to identify custom gestures <span>(i.e. map rotate)</span>.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section data-bespoke-state="rotate">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Multi-touch</div>
+                    </div>
+                    <ol>
+                        <li>A quick search for rotational velocity will give you an algorithm <span><a href="http://en.wikipedia.org/wiki/Angular_velocity">(wiki)</a></span> to calculate rotation of a single touch around a point,</li>
+                        <li>Calculate the point between the two touches <span>(simple midpoint algorithm)</span></li>
+                        <li>Then calculate rotational velocity of both touches around this center, normalize the results, and then draw the updates to the screen.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Multi-touch events</div>
+                    </div>
+                    <ul>
+                        <li><span>touchstart</span> - when starting touch</li>
+                        <li><span>touchmove</span> - when moving while touching</li>
+                        <li><span>touchend</span> - when releasing finger after a completed touch motion</li>
+                        <li><span>touchcancel</span> - when the touch sequence is cancelled (panning, OS-level events, notifications)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Multi-touch event properties</div>
+                    </div>
+                    <ul>
+                        <li><span>event.touches</span> - all touches for a single or multi-touch event</li>
+                        <li><span>event.targetTouches</span> - get all touches for the target element</li>
+                        <li><span>event.changedTouches</span> - get all changed touches for this event</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <div class="content">
+                    <pre>
+function handler(e){ <span>// event.changedTouches[0].pageX...</span> }
+function stateUpdater(){ <span>// fine-tuned state updates</span>
+    var debouncedHandler = debounce(handler, 16);
+    return function(e){ <span>// then call debouncedHandler</span>
+        debouncedHandler(e);
+    }
+}
+function startBindings(){
+    var updater = stateUpdater(),
+        win = $(this); <span>// assuming all events should target the same element</span>
+    win.on('touchmove', updater);
+    win.on('touchend touchcancel', function(){
+        win.off('touchmove', updater);
+    });
+}
+<span>// bind late, unbind ASAP</span>
+$(document.body).on('touchstart', startBindings);
+</pre>
+                </div>
+            </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Accelerometer / Gyroscope</div>
+                    </div>
+                    <ul>
+                        <li><a href="https://github.com/ehzhang/sense-js" target="_blank">Sense.js</a></li>
+                        <li><a href="http://sense-js.jit.su/orientation" target="_blank">Ball demo</a></li>
+                        <li><a href="http://sense-js.jit.su/scroll" target="_blank">"Gyroscroll" demo</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section data-bespoke-state="urkle">
+                <div class="content">
+                    <pre>
+var sense = sense.init({});
+sense.addTiltScroll()
+</pre>
+                </div>
+            </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline"><div class="classy">Accelerometer / Gyroscope events</div></div>
+                    <ul>
+                        <li><span>deviceorientation</span> - when the gyroscope sends events <span>(i.e. tilting)</span></li>
+                        <li><span>devicemotion</span> - when the accelerometer sends events <span>(i.e. flicking)</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline"><div class="classy">Accelerometer / Gyroscope events</div></div>
+                    <pre>
+function handler(e){
+    console.log(e.alpha, e.beta, e.gamma)
+}
+function stateUpdater(){ <span>// fine-tuned state updates</span>
+    var debouncedHandler = debounce(handler, 16);
+    return function(e){ <span>// then call debouncedHandler</span>
+        debouncedHandler(e);
+    }
+}
+function startBindings(){
+    var updater = stateUpdater();
+    $(document.body).on('deviceorientation', updater);
+}
+startBindings();
+</pre>
+                </div>
+            </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline"><div class="classy">Accelerometer / Gyroscope events</div></div>
+                    <ul>
+                        <li><span>event.alpha</span> - rotates around z-axis</li>
+                        <li><span>event.beta</span> - rotates around x-axis</li>
+                        <li><span>event.gamma</span> - rotates around y-axis</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline"><div class="classy"><a href="./experiments/gyrostars.html" target="_blank">Accelerometer / Gyroscope demo</a></div></div>
+                </div>
+            </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">LEAP Motion</div>
+                    </div>
+                    <ul>
+                        <li><a href="https://developer.leapmotion.com/gallery/left-or-right" target="_blank">LEAP Motion site</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section data-bespoke-state="leap"></section>
+
+
+        <section data-bespoke-state="code">
+            <div class="content">
+                <div class="byline">
+                    <div class="classy large">Non-standard UI and UX concepts</div>
+                </div>
+            </div>
+        </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy "><strong>Justin Meyer</strong> on Large Apps</div>
+                    </div>
+                    <blockquote>The secret to building large apps is never build large apps. Break your applications into small pieces. Then, assemble those testable, bite-sized pieces into your big application.</blockquote>
+                </div>
+            </section>
+
+            <section data-bespoke-state="headdesk">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy ">In otherwords... don't unleash a fury of new concepts on your users without a fair warning.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Instead, try putting a slight spin on something classic: <a href="http://tympanus.net/Tutorials/NaturalLanguageForm/" target="_blank">Natural Language Forms</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy"><strong>Avdi Grimm</strong> on Quality Matters</div>
+                    </div>
+                    <blockquote>When I hear "JUST BANG OUT CODE THAT WORKS" I think of all the apps I don't use anymore because they gradually lost the ability to iterate.</blockquote>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">In otherwords...</div>
+                    </div>
+                    <ul>
+                        <li>if the concept isn't simple enough to explain to your users, </li>
+                        <li>or isn't simple enough for developers to explain the implementation, </li>
+                        <li>or the prototypes and code quality weren't given time to mature, </li>
+                    </ul>
+                    <div class="byline">
+                        <div class="classy">...the idea might need some refinement.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-bespoke-state="complex">
+                <div class="content">
+                    <h1>Complexity can be broken down into simple steps.</h1>
+                    <hr>
+                    <h1>"It's Complicated" typically isn't broken down.</h1>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy"><strong>Me</strong> on the "meh"</div>
+                    </div>
+                    <blockquote>I would much rather build one site or side-project that really rocks than build 5 mediocre ones. No one ever remembers the "meh".</blockquote>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Currently Established UI "sameness"</div>
+                    </div>
+                    <ul>
+                        <li>jQuery, jQuery UI, Kendo, jQ widgets</li>
+                        <li>Bootstrap, Foundation, Topcoat...</li>
+                        <li>Angular UI <span><a href="http://angular-ui.github.io/" target="_blank">Github</a></span></li>
+                        <li>HTML5 input types (ranges, sliders, select box, search boxes, datalist)</li>
+                        <li><span><a href="http://customelements.io/" target="_blank">web components</a></span>, <span><a href="https://www.polymer-project.org/" target="_blank">polymer</a></span>, <span><a href="https://github.com/skatejs/skatejs" target="_blank">skate</a></span> (and good ol' <span>document.registerElement()</span>)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Agile design and agile development go hand-in-hand; if design isn't on your mind when you are coding, you've already lost. Design won't settle for being an afterthought. -->
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">How do people innovate and come up with profoundly new approaches to an old problem?</div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-bespoke-state="shuhari"></section>
+
+            <!-- <section data-bespoke-state="breeze"></section> -->
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Takeaways</div>
+                    </div>
+                    <ul>
+                        <li>Find your "what if's" and focus on those</li>
+                        <li>Prototype, start simple</li>
+                        <li>Deep focus &rarr; intuition &rarr; creativity &rarr; problem solving &rarr; delightful UIs</li>
+                    </ul>
+                </div>
+            </section>
+
+        <section data-bespoke-state="code">
+            <div class="content">
+                <div class="byline">
+                    <div class="classy large">Bringing it all together</div>
+                </div>
+                <h4>&nbsp;</h4>
+            </div>
+        </section>
+
+            <section data-bespoke-state="cat-herding">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy large">Bringing it all together</div>
+                    </div>
+                    <h4>... is a bit like herding cats</h4>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy"><strong>Stephen Hay</strong> on simplicity</div>
+                    </div>
+                    <blockquote>Start a new project as simple as it can get and only add things if you really need them.</blockquote>
+                </div>
+            </section>
+
+            <!-- <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">The Zen of Python (redacted)</div>
+                    </div>
+                    <ol>
+                        <li>Don't do hard things, do easy things.</li>
+                        <li>Simple is better than complex.</li>
+                        <li>Complex is better than complicated.</li>
+                        <li>Flat is better than nested.</li>
+                        <li>Readability counts.</li>
+                        <li>If the implementation is hard to explain, it's a bad idea.</li>
+                        <li>If the implementation is easy to explain, it may be a good idea.</li>
+                    </ol>
+                </div>
+            </section> -->
+
+            <!-- <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">15 principles of Unix</div>
+                    </div>
+                    <ul>
+                        <li>Modularity: Write simple parts connected by clean interfaces.</li>
+                        <li>Clarity: Clarity is better than cleverness.</li>
+                        <li>Composition: Design programs to be connected to other programs.</li>
+                        <li>Separation: Separate policy from mechanism; separate interfaces from engines.</li>
+                        <li>Simplicity: Design for simplicity; add complexity only where you must.</li>
+                        <li>Parsimony: Write a big program only when it is clear by demonstration that nothing else will do.</li>
+                        <li>Transparency: Design for visibility to make inspection and debugging easier.</li>
+                        <li>Robustness: Robustness is the child of transparency and simplicity.</li>
+                        <li>Representation: Fold knowledge into data so program logic can be stupid and robust.</li>
+                        <li>Least Surprise: In interface design, always do the least surprising thing.</li>
+                        <li>Silence: When a program has nothing surprising to say, it should say nothing.</li>
+                        <li>Repair: When you must fail, fail noisily and as soon as possible.</li>
+                        <li>Economy: Programmer time is expensive; conserve it in preference to machine time.</li>
+                        <li>Generation: Avoid hand-hacking; write programs to write programs when you can.</li>
+                        <li>Optimization: Prototype before polishing. Get it working before you optimize it.</li>
+                        <li>Diversity: Distrust all claims for “one true way”.</li>
+                        <li>Extensibility: Design for the future, because it will be here sooner than you think.</li>
+                    </ul>
+                </div>
+            </section> -->
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Browser APIs</div>
+                    </div>
+                    <ol>
+                        <li>Device Orientation <span><a target="_blank" href="http://simpl.info/deviceorientation/">(demo)</span></li>
+                        <li>`getUserMedia()` <span><a target="_blank" href="http://simpl.info/getusermedia/">(demo)</a></span></li>
+                        <li>Geolocation <span><a target="_blank" href="https://github.com/samdutton/simpl/blob/master/geolocation/js/main.js">(demo)</a>()</span></li>
+                        <li>Fullscreen API <span><a target="_blank" href="http://simpl.info/fullscreen/">(demo)</a></span></li>
+                        <li>HTML5 Input types <span><a target="_blank" href="http://simpl.info/inputtypes/">(demo)</a></span></li>
+                        <li>localStorage <span><a target="_blank" href="http://simpl.info/localstorage/">(demo)</a></span></li>
+                        <li>Mutation Observer <span><a target="_blank" href="http://simpl.info/mutationobserver/">(demo)</a></span></li>
+                        <li>Object.observe() <span><a target="_blank" href="http://simpl.info/observe/">(demo)</a></span></li>
+                    </ol>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Browser APIs</div>
+                    </div>
+                    <ol>
+                        <li>Notification API <span><a target="_blank" href="http://aurelio.audero.it/demo/web-notifications-api-demo.html">(demo)</a></span></li>
+                        <li>Page Visibility API <span><a target="_blank" href="http://simpl.info/pagevisibility/">(demo)</a></span></li>
+                        <li>Web Workers <span><a target="_blank" href="http://simpl.info/webworkers/">(demo)</a></span></li>
+                        <li>Web Speech API <span><a target="_blank" href="https://simpl.info/stt/">(demo 1)</a></span> and Web Speech Synthesis API <span><a target="_blank" href="http://simpl.info/tts/">(demo 2)</a></span></li>
+                        <li>GamePad API <span><a target="_blank" href="http://caniuse.com/#feat=gamepad">(CanIUse)</a></span> and <span><a target="_blank" href="http://www.html5rocks.com/en/tutorials/doodles/gamepad/">(html5rocks)</a></span></li>
+                        <li>online/offline status <span><a target="_blank" href="http://caniuse.com/online-status">(CanIUse)</a></span></li>
+                        <li>requestAnimationFrame <span><a target="_blank" href="http://caniuse.com/requestanimationframe">(CanIUse)</a></span></li>
+                        <li>screen orientation API - lock the screen in a particular direction <span><a target="_blank" href="http://aurelio.audero.it/demo/screen-orientation-api-demo.html">(demo)</a></span></li>
+                    </ol>
+                </div>
+            </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy ">... and herding them...</div>
+                    </div>
+                    <ul>
+                        <li>Feature Detection</li>
+                        <li>Polyfills, if within reason <span>(performance, support)</span></li>
+                        <li>PhoneGap, Cordova, etc APIs</li>
+                        <li>Asset management <span>(preloaders?)</span></li>
+                        <li>Conditional and lazy-loading</li>
+                        <li>Caching and offline considerations</li>
+                        <li>Rendering optimization</li>
+                        <li>"Fat Finger" scenarios and adaptive interaction</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">context menus</div>
+                    </div>
+                </div>
+            </section> -->
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">A note on performance</div>
+                    </div>
+                    <blockquote>4 things a browser can animate cheaply:</blockquote>
+                    <ol>
+                        <li>size -> <span>transform: scale(n)</span></li>
+                        <li>position -> <span>transform: translateX(npx)</span></li>
+                        <li>rotation -> <span>transform: rotate(ndeg)</span></li>
+                        <li>opacity -> <span>opacity: 0...1</span></li>
+                    </ol>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">A note on performance</div>
+                    </div>
+                    <blockquote>Animate as much as you can with declarative CSS <span>(:hover rules, pseudo-classes, keyframes)</span>. Browsers can better optimize simple CSS animations and transitions. But these obviously only work for "one-shot" transitions.</blockquote>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">"Fat Finger" scenarios</div>
+                    </div>
+                    <blockquote>"Fluff up" your <span>event target</span> with invisible elements.</blockquote>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy"><a href="http://quiet-springs-6093.herokuapp.com/#/" target="_blank">Discovery UI</a></div>
+                    </div>
+                </div>
+            </section>
+
+        <section data-bespoke-state="code">
+            <div class="content">
+                <div class="byline">
+                    <div class="classy large">Pushing the boundaries with experimentation</div>
+                </div>
+            </div>
+        </section>
+
+            <section>
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy ">Considerations for experimentation</div>
+                    </div>
+                    <ul>
+                        <li>Context-aware, not just responsive</li>
+                        <li>DIY ethic</li>
+                        <li>Strive for minimal animation code</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">simple css hover-select from mkeas.org</div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Parallax battle: scrollfall (http://editsquarterly.com/), bartek Virtual Scroll, onScroll, new method (from notes, debounced and triggered by any interaction event (not just panning/scrolling)), CSS-only</div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-bespoke-state="pan-vs-scroll">the reason parallax has been a pain</section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Combining independent animations, moving X inside an item moving Y, etc.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Other Experiments</div>
+                    </div>
+                    <ul>
+                        <li>3d engine</li>
+                        <li>SVG Jello (adaptive interaction, scalable UI, code handles variable sizes and dimensions)</li>
+                        <li>starfield (biggest parts - game loop and property tweener)</li>
+                        <li>parallax</li>
+                        <li>Facing North</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Considerations</div>
+                    </div>
+                    <ul>
+                        <li>(The New Dawn of) Microlibs</li>
+                        <li>offset animations for complex, organic feeling</li>
+                        <li>conditional and lazy loading</li>
+                        <li>polyfills (but only if not in performance critical areas</li>
+                    </ul>
+                </div>
+            </section> -->
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy"><a href="http://matthiasak.github.io/radial-menu/" target="_blank">Touch/hold/drag radial menu</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-bespoke-state="r1"></section>
+            <section data-bespoke-state="r2"></section>
+            <section data-bespoke-state="r3"></section>
+            <section data-bespoke-state="r4"></section>
+            <section data-bespoke-state="r5"></section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Utilities, herding cats, and other tricks</div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Controlling the environment</div>
+                    </div>
+                    <pre>
+function prepEnvironment() {
+    <span>// Disable selecting of text</span>
+    document.onselectstart = function(e) {
+        return e.srcElement.type && !!e.srcElement.type.match(/(text|textarea|password)/);
+    };
+
+    <span>// Disable (or customize?) context menus</span>
+    document.oncontextmenu = function() {
+        return false
+    };
+
+    <span>// Disable dragging of HTML elements</span>
+    document.ondragstart = function() {
+        return false
+    };
+}
+</pre>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Customized tweening</div>
+                    </div>
+                    <pre>
+function tween(obj, prop, to, duration, callback) {
+    var start = parseFloat(obj[prop]),
+        change = to - start,
+        currentTime = 0,
+        increment = 20;
+
+    var animate = function() {
+        currentTime += increment;
+        var val = Math.easeInOutQuad(currentTime, start, change, duration);
+        obj[prop] = val;
+        if (currentTime <= duration) {
+            requestAnimationFrame(animate);
+        } else {
+            callback && callback();
+        }
+    };
+    requestAnimationFrame(animate);
+}
+</pre>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Customized tweening</div>
+                    </div>
+                    <pre>
+<span>//t = current time</span>
+<span>//b = start value</span>
+<span>//c = change in value</span>
+<span>//d = duration</span>
+Math.easeInOutQuad = function(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+}
+</pre>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Single Responsibility Principle</div>
+                    </div>
+                    <pre>
+function Orbiter(element) { <span>// ...</span> }
+
+Orbiter.prototype.setTransformForPosition =
+function(i, width, num_orbiters, rotation) {
+    var starting_deg = 90,
+        deg_per_orbiter = (360 / num_orbiters),
+        deg = (i > 0) ? (deg_per_orbiter * i) : 0,
+        m360 = (deg + starting_deg + rotation) % 360,
+        transform = 'rotate(' + m360 + 'deg)'+
+                    'translate(-' + (width / 2) + 'px)'+
+                    'rotate(-' + m360 + 'deg)';
+
+    this.element.style['transform'] = transform;
+}
+</pre>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">CanOpener()</div>
+                    </div>
+                    <pre>
+;(function(win, undefined) {
+    var styles = [{ url: '/bower_components/normalize.css/normalize.css'},
+        { url: '/css/main.css' }];
+    var js = [{ url: '/js/polyfills.js' },
+        <span>// ... </span>
+        { url: '/js/utilities.js' },
+        { url: '/js/orbiter.js' },
+        { url: '/js/audio_manager.js' },
+        { url: '/js/loading_screen.js' },
+        { url: '/js/hub.js' },
+        { url: '/js/video_manager.js' },
+        { url: '/js/routes.js' }];
+    loader.load.apply(loader, styles.concat(js)).then(function() {
+        debounce(InitRoutes, 60)();
+    });
+})(this, undefined);
+</pre>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy"><a href="localhost:3000" target="_blank">Facing North (Release Spring 2015?)</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <div data-bespoke-state="sundance-2016"></div>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">FUIs (Fantasy User Interfaces)</div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Multi-touch FUIs are possible <strong>now</strong>, with the advent of technologies in the browser available to us today.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-bespoke-state="st1"></section>
+
+            <section data-bespoke-state="st2"></section>
+
+            <section data-bespoke-state="st3"></section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy"><a href="http://work.gmunk.com/OBLIVION-GFX" target="_blank">GMUNK</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy"><a href="https://www.youtube.com/watch?v=uFWw6hGIKmc" target="_blank">Tilt Brush</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">swipe to peep (http://itchingpixels.com/content/images/2014/Aug/swipetopeep-12.gif)</div>
+                    </div>
+                </div>
+            </section> -->
+        <!-- SECTIONS OF CORE CONTENT (1-5) -->
+
+        <section data-bespoke-state="space">
+            <div class="content">
+                <hr>
+                <h1>Thank you!</h1>
+                <div class="me"></div>
+                <div class="byline">
+                    <span><a target="_blank" href="http://mkeas.org/">http://mkeas.org</a>&nbsp;&nbsp;~&nbsp;&nbsp;<a target="_blank" href="https://twitter.com/matthiasak">@matthiasak</a></span>
+                </div>
+            </div>
+        </section>
+
+        <!--
+        "This is the Unix philosophy: Write programs that do one thing and do it well. Write programs to work together. Write programs to handle text streams, because that is a universal interface" - Doug McIlroy, quoted in A Quarter Century of Unix [Salus]. Addison-Wesley. 1994.
+
+        > “Then something Tookish woke up inside him, and he wished to go and see the great mountains, and hear the pine-trees and the waterfalls, and explore the caves, and wear a sword instead of a walking-stick.”
+        ~ J.R.R. Tolkien, The Hobbit
+
+        > "Everyone holds his fortune in his own hands, like a sculptor the raw material he will fashion into a figure. But it’s the same with that type of artistic activity as with all others: We are merely born with the capability to do it. The skill to mold the material into what we want must be learned and attentively cultivated."
+        ~ JOHANN WOLFGANG VON GOETHE; Excerpt From: Robert Greene -- Mastery.
+
+        > “Masters return to this childlike state, their works displaying degrees of spontaneity and access to the unconscious, but at a much higher level than the child.”
+        Excerpt From: Robert Greene -- Mastery.
+         -->
+
+    </article>
+
+    <script src="./js/bespoke.js"></script>
+    <script src="./js/bespoke-plugins.js"></script>
+</body>
+
+</html>
