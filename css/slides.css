@@ -347,19 +347,6 @@ article::after {
     background-size: contain;
     -webkit-filter: grayscale(0.7) brightness(0.7);
 }
-.solutions::before {
-    background-color: white;
-    background-image: url(../img/solutions.png);
-    background-size: contain;
-}
-.timelapse::before {
-    background-image: url(../img/timelapse.gif);
-    background-size: contain;
-}
-.sundance::before {
-    background-image: url(../img/2013-sundance-winners.jpg);
-    background-size: contain;
-}
 .sundance-2016::before {
     background-image: url(../img/2016-sundance-winners.jpg);
     background-size: contain;
@@ -373,21 +360,16 @@ article::after {
     background-image: url(../img/force-mult.gif);
     background-size: contain;
 }
-.job-fair::before {
-    background-image: url(../img/jobfair.gif);
-    background-size: contain;
-    opacity: .6;
-}
-.stumble::before {
+/*.stumble::before {
     background-image: url(../img/stumble.gif);
     background-size: contain;
     opacity: .6;
-}
-.darth::before {
+}*/
+/*.darth::before {
     background-image: url(../img/darth.gif);
     background-size: contain;
     opacity: .6;
-}
+}*/
 .minion::before {
     background-image: url(../img/minion-unicorn.gif);
     background-size: contain;
@@ -450,7 +432,7 @@ article::after {
     background-image: url(../img/shuhari.png);
     background-size: cover;
 }
-.breese {
+.breeze {
     background-color: white;
 }
 .breeze::before {
