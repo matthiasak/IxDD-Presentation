@@ -479,4 +479,5 @@ article::after {
 .menu::before {
     background-image: url(../img/menu.gif);
     background-size: contain;
+    -webkit-filter: grayscale(0.75) brightness(0.75);
 }

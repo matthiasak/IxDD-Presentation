@@ -933,7 +933,7 @@ startBindings();
             <section data-bespoke-state="menu">
                 <div class="content">
                     <div class="byline">
-                        <div class="classy">simple css hover-select from mkeas.org</div>
+                        <div class="classy"><a href="http://mkeas.org" target="_blank">Simple CSS hover-select</a></div>
                     </div>
                 </div>
             </section>
@@ -941,20 +941,94 @@ startBindings();
             <section data-bespoke-state="">
                 <div class="content">
                     <div class="byline">
-                        <div class="classy">Parallax battle: scrollfall (http://editsquarterly.com/), bartek Virtual Scroll, onScroll, new method (from notes, debounced and triggered by any interaction event (not just panning/scrolling)), CSS-only</div>
+                        <div class="classy">Parallax battle</div>
                     </div>
+                    <ol>
+                        <li><a href="http://editsquarterly.com/" target="_blank">Scrollfall</a></li>
+                        <li><a href="http://bartekdrozdz.com/" target="_blank">Virtual Scroll</a></li>
+                        <li>Regular ol' <span>onScroll()</span></li>
+                        <li><a href="http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/">CSS-only</a></li>
+                        <li>Debounced game loop triggered on touch and on scroll</li>
+                    </ol>
                 </div>
             </section>
 
-            <section data-bespoke-state="pan-vs-scroll">the reason parallax has been a pain</section>
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Parallax battle</div>
+                    </div>
+                    <pre>
+.parallax__group
+    .parallax__layer.back
+    .parallax__layer.base
+</pre>
+                </div>
+            </section>
 
             <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Parallax battle</div>
+                    </div>
+                    <pre>
+.parallax__group {
+    position: relative;
+    perspective: 1px
+    height: 100vh;
+    transform-style: preserve-3d;
+}
+.parallax__layer {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+}
+.base {
+    transform: translateZ(0);
+}
+.back {
+    transform: translateZ(-1px);
+}
+</pre>
+                </div>
+            </section>
+
+            <section data-bespoke-state="">
+                <div class="content">
+                    <div class="byline">
+                        <div class="classy">Parallax battle</div>
+                    </div>
+                    <pre>
+var animationState = {};
+function handleTouchOrScroll(){
+    var b = $(document.body);
+    b.on('touchmove scroll', debounce(animate, 16));
+    b.on('touchend touchcancel', disableAnimation);
+}
+function enableAnimation(){ animationState.enabled = true; }
+function disableAnimation(){ animationState.enabled = false; }
+function animate(){
+    enableAnimation(); updateState();
+    requestAnimationFrame(setCSS);
+    animationState.timeout && clearTimeout(animationState.timeout);
+    animationState.timeout = setTimeout(disableAnimation, 1000);
+}
+function updateState(){ <span>// modify the state variable for scrollTop, etc</span> }
+function setCSS(){ <span>// do something with styles / onScroll...</span>
+    animationState.enabled && requestAnimationFrame(setCSS);
+}
+</pre>
+                </div>
+            </section>
+
+            <section data-bespoke-state="pan-vs-scroll"></section>
+
+            <!-- <section data-bespoke-state="">
                 <div class="content">
                     <div class="byline">
                         <div class="classy">Combining independent animations, moving X inside an item moving Y, etc.</div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <section data-bespoke-state="">
                 <div class="content">
@@ -962,11 +1036,9 @@ startBindings();
                         <div class="classy">Other Experiments</div>
                     </div>
                     <ul>
-                        <li>3d engine</li>
-                        <li>SVG Jello (adaptive interaction, scalable UI, code handles variable sizes and dimensions)</li>
-                        <li>starfield (biggest parts - game loop and property tweener)</li>
-                        <li>parallax</li>
-                        <li>Facing North</li>
+                        <li><span><a href="http://matthiasak.github.io/3D-svg-model-viewer/" target="_blank">3D Engine</a></span></li>
+                        <li><span><a href="http://codepen.io/matthiasak/full/qIfcj">SVG Jello</a></span></li>
+                        <li><span><a href="http://spacecityjs.com/">Starfield (game loop, tweening)</a></span></li>
                     </ul>
                 </div>
             </section>
@@ -988,7 +1060,7 @@ startBindings();
             <section data-bespoke-state="">
                 <div class="content">
                     <div class="byline">
-                        <div class="classy"><a href="http://matthiasak.github.io/radial-menu/" target="_blank">Touch/hold/drag radial menu</a></div>
+                        <div class="classy"><a href="http://matthiasak.github.io/radial-menu/" target="_blank">Facing North - Touch/hold/drag radial menu</a></div>
                     </div>
                 </div>
             </section>
